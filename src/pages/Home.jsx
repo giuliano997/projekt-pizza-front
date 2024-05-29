@@ -1,7 +1,5 @@
 import React from "react";
-import headerImage from "../assets/header-image.png"; // Platzhalterbild für den Header
-import pizzaImage from "../assets/pizza-image.png"; // Platzhalterbild für die Pizzen
-import historyImage from "../assets/history-image.png"; // Platzhalterbild für die Geschichte
+import pizzaImage from "../assets/pizza.png"; // Platzhalterbild für die Pizzen
 
 function Home() {
   return (

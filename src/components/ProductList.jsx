@@ -1,7 +1,7 @@
 // frontend/src/components/ProductList.jsx
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./styles.css"; // Füge dies hinzu, um das CSS zu importieren
+import "./css/global.css";
 
 const ProductList = () => {
   const [pizzas, setPizzas] = useState([]);

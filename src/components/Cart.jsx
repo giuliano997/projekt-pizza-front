@@ -1,6 +1,6 @@
 // frontend/src/components/Cart.jsx
 import React from "react";
-import "./styles.css"; // Füge dies hinzu, um das CSS zu importieren
+import "./css/global.css";
 
 const Cart = ({ cart }) => (
   <div className="cart">

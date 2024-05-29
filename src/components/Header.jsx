@@ -1,6 +1,4 @@
-import "./css/Header.css";
-import logo from "../assets/devquiz-logo.png";
-import arrowIcon from "../assets/arrow-right.svg";
+import "./css/global.css";
 
 export default function Header({ currentPage, changePage }) {
   const handleQuizRestart = () => {

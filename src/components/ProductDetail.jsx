@@ -1,7 +1,6 @@
-// frontend/src/components/ProductDetails.jsx
 import React, { useState, useEffect } from "react";
+import "./css/global.css";
 import { useParams, useHistory } from "react-router-dom";
-import "./styles.css"; // Füge dies hinzu, um das CSS zu importieren
 
 const ProductDetails = ({ addToCart }) => {
   const { id } = useParams();
