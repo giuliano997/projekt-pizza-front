@@ -1,5 +1,4 @@
 import React from "react";
-import pizzaImage from "../assets/pizza.png"; // Platzhalterbild für die Pizzen
 
 function Home() {
   return (
@@ -26,7 +25,6 @@ function Home() {
 
       <main>
         <section>
-          <img src={historyImage} alt="Unsere Geschichte" />
           <h2>Unsere Geschichte</h2>
           <p>
             Willkommen bei Margarita Madness! Entdecke unsere Geschichte:
@@ -44,7 +42,6 @@ function Home() {
         </section>
 
         <section>
-          <img src={pizzaImage} alt="Unsere Pizzen" />
           <h2>Unsere Pizzen</h2>
           <p>
             Einheitliche Größe, überragender Geschmack, bequeme Lieferung: Bei

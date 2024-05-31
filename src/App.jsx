@@ -1,35 +1,23 @@
-// frontend/src/App.js
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Products from "./components/ProductList";
-import ProductDetail from "./components/ProductDetail";
-import CartPage from "./pages/CartPage";
+import ProductList from "./pages/ProductList";
+import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
 
-const App = () => {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (pizza) => {
-    setCart([...cart, pizza]);
-  };
-
+function App() {
   return (
     <Router>
       <Header />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/products" exact component={Products} />
-        <Route
-          path="/products/:id"
-          render={(props) => <ProductDetail {...props} addToCart={addToCart} />}
-        />
-        <Route path="/cart" render={() => <CartPage cart={cart} />} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
       <Footer />
     </Router>
   );
-};
-
-export default App;
+}

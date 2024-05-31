@@ -1,10 +1,18 @@
 import React from "react";
-import Cart from "../components/Cart";
 
-const CartPage = ({ cart }) => (
-  <div>
-    <Cart cart={cart} />
-  </div>
-);
+function Cart({ cart }) {
+  return (
+    <div>
+      <h1>Warenkorb</h1>
+      <ul>
+        {cart.map((item, index) => (
+          <li key={index}>
+            {item.name} - ${item.price}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
-export default CartPage;
+export default Cart;

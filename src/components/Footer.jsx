@@ -1,17 +1,12 @@
-import "./css/global.css";
+import React from "react";
 
-export default function Footer() {
+function Footer() {
   return (
-    <>
-      <footer>
-        <div className="logo-copyright">
-          <div className="footer-logo"></div>
-          <span>2024 © All rights reserved.</span>
-          <li className="footer-impressum">
-            <a href="#">Impressum</a>
-          </li>
-        </div>
-      </footer>
-    </>
+    <footer>
+      <p>Impressum</p>
+      <a href="#fake-link">Fake Link</a>
+    </footer>
   );
 }
+
+export default Footer;
