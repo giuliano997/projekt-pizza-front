@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "../App.css";
 
 function ProductList() {
   const [pizzas, setPizzas] = useState([]);
@@ -10,6 +11,7 @@ function ProductList() {
       .get("http://localhost:5000/pizzas")
       .then((response) => {
         setPizzas(response.data);
+        console.log(response);
       })
       .catch((error) => {
         console.error("There was an error fetching the pizzas!", error);
@@ -17,15 +19,20 @@ function ProductList() {
   }, []);
 
   return (
-    <div>
+    <div className="product-list">
       <h1>Unsere Pizzen</h1>
-      <ul>
+      <div className="grid-container">
         {pizzas.map((pizza) => (
-          <li key={pizza._id}>
-            <Link to={`/products/${pizza._id}`}>{pizza.name}</Link>
-          </li>
+          <div key={pizza._id} className="grid-item">
+            <Link to={`/products/${pizza._id}`}>
+              <img src={pizza.image} alt={pizza.title} />
+              <p>{pizza.title}</p>
+            </Link>
+            <p>{pizza.price}€</p>
+            <p>{pizza.ingredients.join(", ")}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

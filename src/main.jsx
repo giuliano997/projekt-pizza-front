@@ -19,15 +19,17 @@ function MainApp() {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<ProductList />} />
-        <Route
-          path="/products/:id"
-          element={<ProductDetails addToCart={addToCart} />}
-        />
-        <Route path="/cart" element={<Cart cart={cart} />} />
-      </Routes>
+      <div className="site-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<ProductList />} />
+          <Route
+            path="/products/:id"
+            element={<ProductDetails addToCart={addToCart} />}
+          />
+          <Route path="/cart" element={<Cart cart={cart} />} />
+        </Routes>
+      </div>
       <Footer />
     </Router>
   );

@@ -1,0 +1,16 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Flexibles Raster mit einer Mindestbreite von 200px */
+  grid-gap: 20px; /* Abstand zwischen den Elementen im Raster */
+}
+
+.grid-item {
+  text-align: center;
+}
+
+.grid-item img {
+  max-width: 100%;
+}

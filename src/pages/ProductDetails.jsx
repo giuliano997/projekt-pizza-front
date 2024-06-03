@@ -27,9 +27,10 @@ function ProductDetails({ addToCart }) {
     <div>
       {pizza ? (
         <div>
-          <h1>{pizza.name}</h1>
+          <img src={pizza.image} alt={pizza.title} />
+          <h1>{pizza.title}</h1>
           <p>{pizza.description}</p>
-          <p>Price: ${pizza.price}</p>
+          <p>Price: {pizza.price}€</p>
           <button onClick={handleAddToCart}>Add to Cart</button>
           <button onClick={() => navigate("/products")}>
             Back to Product List

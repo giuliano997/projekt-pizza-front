@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
+import "./App.css";
+import "./global.css";
 
 function App() {
   return (
@@ -21,3 +23,5 @@ function App() {
     </Router>
   );
 }
+
+export default App;
